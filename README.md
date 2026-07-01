@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+A clean, modern portfolio site built to learn and showcase front-end development. Static front-end only — no backend — ready to deploy on Vercel.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 16** (App Router) + **TypeScript**
+- **Tailwind CSS v4** with a custom theme in `tailwind.config.ts`
+- **Framer Motion** for scroll reveals, hero text animation, and hover interactions
+- **ESLint** + **Prettier** for consistent code style
+
+## Getting started
 
 ```bash
+# Install dependencies (if you haven't already)
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-reload as you edit files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Other scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run build` | Production build |
+| `npm run start` | Serve production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format all files with Prettier |
+| `npm run format:check` | Check formatting without writing |
 
-## Learn More
+## File structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+portfolio/
+├── app/
+│   ├── layout.tsx          # Root layout — fonts, Nav, Footer
+│   ├── template.tsx        # Page transition wrapper (Framer Motion)
+│   ├── globals.css         # Tailwind imports + @config
+│   ├── page.tsx            # Home / About
+│   ├── projects/page.tsx   # Projects grid
+│   └── contact/page.tsx    # Contact form + social links
+├── components/
+│   ├── Nav.tsx             # Sticky nav + mobile menu
+│   ├── Footer.tsx
+│   ├── AnimatedText.tsx    # Staggered hero tagline
+│   ├── ScrollReveal.tsx    # whileInView section wrapper
+│   ├── SectionHeading.tsx
+│   ├── ProjectCard.tsx
+│   └── ContactForm.tsx
+├── lib/
+│   ├── site.ts             # Your name, bio, links (edit this!)
+│   ├── projects.ts         # Project data array
+│   ├── animations.ts       # Shared Framer Motion variants
+│   └── types/project.ts    # Project TypeScript interface
+├── tailwind.config.ts      # Custom colors, fonts, spacing
+├── next.config.ts
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customize your content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Search for `TODO` comments across the project. The main places to edit:
 
-## Deploy on Vercel
+1. **`lib/site.ts`** — name, role, bio, email, GitHub, LinkedIn, skills
+2. **`lib/projects.ts`** — project titles, descriptions, links, tech stack
+3. **`app/page.tsx`** — headshot placeholder (`YN` initials → your photo in `/public`)
+4. **`components/Nav.tsx`** — logo/brand text
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this repo to GitHub (or GitLab/Bitbucket).
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
+3. Vercel auto-detects Next.js — no extra config needed for a static/front-end site.
+4. Click **Deploy**. Every push to your main branch triggers a new deployment.
+
+For a fully static export later, see [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports).
+
+## Learn more
+
+- [Next.js App Router docs](https://nextjs.org/docs/app)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Framer Motion](https://www.framer.com/motion/)
