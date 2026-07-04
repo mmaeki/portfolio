@@ -8,5 +8,4 @@ export interface Project {
   imageGradient: string;
   techStack: string[];
   githubUrl: string;
-  liveUrl: string;
 }

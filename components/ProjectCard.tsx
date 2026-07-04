@@ -62,14 +62,6 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           >
             GitHub →
           </Link>
-          <Link
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-primary transition-colors hover:text-accent"
-          >
-            Live demo →
-          </Link>
         </div>
       </div>
     </motion.article>

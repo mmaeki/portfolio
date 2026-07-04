@@ -3,12 +3,12 @@
 export const siteConfig = {
   /** Home page */
   name: "maggie zhang",
-  description: "currently working as an undergradate researcher at mit's sensible city lab",
-  // Write across multiple lines for readability — .join(" ") keeps it one paragraph in the UI
+  description: "currently working as an undergraduate researcher at mit's sensible city lab",
   bio: [
     "hi! i'm maggie, a sophomore at mit studying computer science and math",
-    "and interested in all things tech! you can find me beli'ing",
-    "it up at a random matcha cafe, driving around la jolla, or by the charles river.",
+    "and interested in all things tech! other things i enjoy are:",
+    "ranking tourist traps on beli, malcolm todd's latest album, and",
+    "a good cup of milk tea."
   ].join(" "),
 
 } as const;

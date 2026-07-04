@@ -12,9 +12,9 @@ export default function ProjectsPage() {
   return (
     <section className="mx-auto w-full max-w-content px-6 py-section">
       <SectionHeading
-        eyebrow="Work"
-        title="Projects"
-        description="A selection of apps and experiments. Edit lib/projects.ts to add your own."
+        eyebrow="work"
+        title="projects"
+        description="a collection of what i've been up to lately"
         centered
       />
 
